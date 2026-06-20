@@ -1,0 +1,22 @@
+# secrets
+.env
+*.pem
+*.key
+
+# local DB / state
+data.json
+*.db
+*.sqlite
+
+# test scripts (may contain key references)
+test-e2e.js
+test*.js
+
+# build artifacts
+node_modules/
+dist/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db

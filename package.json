@@ -1,0 +1,15 @@
+{
+  "name": "hedg-agent",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@mysten/sui": "2.17.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.18.0",
+    "puppeteer": "^25.1.0"
+  }
+}
