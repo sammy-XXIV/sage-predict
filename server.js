@@ -1709,9 +1709,13 @@ async function runArbAuto() {
 }
 
 // ── Morning brief (9am UTC) ───────────────────────────────────────
+let lastBriefDate = null;
 async function morningBrief() {
   const now = new Date();
   if (now.getUTCHours() !== 9 || now.getUTCMinutes() > 2) return;
+  const today = now.toISOString().slice(0, 10);
+  if (lastBriefDate === today) return;
+  lastBriefDate = today;
 
   const price = await getBtcPrice().catch(() => null);
   if (!price) return;
